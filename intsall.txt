@@ -1,0 +1,22 @@
+1. 安裝 QEMU for Windows
+到這裡下載 QEMU Windows 版： https://www.qemu.org/download/#windows
+下載 qemu-w64-setup.exe 或壓縮檔版本，安裝完成後記下安裝路徑，例如：
+
+將 QEMU 加入系統環境變數的 Path，例如：
+C:\Program Files\qemu
+
+驗證是否安裝成功：
+qemu-system-arm --version
+
+
+
+2. 安裝 ARM GCC 工具鏈
+安裝 ARM GCC 工具鏈（交叉編譯器）：
+到官網下載：
+https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
+選擇 Windows x86_64 安裝版（例如 arm-gnu-toolchain-...-mingw-w64.exe）
+
+安裝完後，也加入環境變數，如：
+C:\Program Files (x86)\Arm GNU Toolchain\13.2 Rel1\bin
+驗證：
+arm-none-eabi-gcc --version
