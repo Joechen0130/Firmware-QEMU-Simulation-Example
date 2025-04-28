@@ -74,3 +74,8 @@ Hello from QEMU!
 Hello from QEMU!
 ...
 ```
+使用 taskkill 指令強制結束 QEMU 進程。輸入以下命令：
+
+```bash
+taskkill /F /IM qemu-system-arm.exe
+```

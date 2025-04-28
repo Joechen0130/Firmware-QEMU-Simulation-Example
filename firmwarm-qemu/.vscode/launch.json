@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug QEMU Firmware",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/firmware.elf",
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb",
+            "miDebuggerPath": "arm-none-eabi-gdb",
+            "miDebuggerServerAddress": "localhost:1234",
+            "targetArchitecture": "arm",
+            "launchCompleteCommand": "None",
+            "setupCommands": [
+                {
+                    "description": "設定暫停點",
+                    "text": "target remote localhost:1234",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "載入符號表",
+                    "text": "load",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
